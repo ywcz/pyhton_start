@@ -44,6 +44,7 @@ for keyword in parseCsv('./test.csv',pre):
             break
         else:
             getData(keyword,http)
-            print('未读取到数据，重复提交')
-            time.sleep(1)
+            print(str(errcount)+'未读取到数据，重复提交')
+            errcount+=1
+            # time.sleep(1)
 
